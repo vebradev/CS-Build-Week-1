@@ -70,7 +70,7 @@ def map(reqest):
     if len(rooms) > 0:
         for room in rooms:
             room_list.append(
-                {"title": room.title, "description": room.description})
+                {"title": room.title, "description": room.description, "n_to": room.n_to, "e_to": room.e_to, "s_to": room.s_to, "w_to": room.w_to})
     return JsonResponse({'map': room_list}, safe=True, status=200)
 
 
